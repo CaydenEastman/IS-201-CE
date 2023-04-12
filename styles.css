@@ -1,0 +1,102 @@
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    background: linear-gradient(to bottom, #3498db, #4bc276);
+    background-repeat: no-repeat;
+    min-height: 98.51vh;
+}
+
+/* Makes the photos animate when your mouse hovers over them */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+    grid-gap: 100px;
+    position: relative;
+    z-index: 1;
+    padding-top: 200px;
+}
+
+.photo {
+    margin: 10px;
+    text-align: center;
+    position: relative; 
+}
+
+.photo img {
+    width: 33%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px gray;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s;
+}
+
+.photo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 74, 74, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
+}
+  
+.photo .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+  
+.photo:hover .text {
+    opacity: 5;
+}
+
+.ulg {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+  
+.button:hover {
+    background-color: #2980b9;
+  }
+  
